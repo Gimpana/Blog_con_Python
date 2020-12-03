@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            {% block title %}
+
+            {% endblock %}
+        </title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static "css/styless.css" %}">
+    </head>
+
+    <body>
+        <!--Cabecera de la página-->    
+        <header>
+            <div class="logotipo">
+                <h1> <img class="img1" src="{% static 'images/python.png' %}">Proyectos con Python <img class="img2" src="{% static 'images/python.png' %}"></h1>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="{% url "inicio" %}">Inicio</a>
+                </li>
+                <li>
+                    <a href="{% url "sobre-nosotros" %}">Sobre Nosotros</a>
+                </li>
+                <li>
+                    <a href="{% url "sobre-pagina" %}">Sobre la página</a>
+                </li>
+            </ul>
+        </nav>
+        <section>
+            <div id="content">
+                <div class="box">
+                    {% block content %}
+
+                    {% endblock %}
+                </div>
+            </div>
+        <section>
+        <footer>
+            <p>Sitio web desarollado por | Ulises Vallejos</p>
+        </footer>
+    </body>
+
+</html>
