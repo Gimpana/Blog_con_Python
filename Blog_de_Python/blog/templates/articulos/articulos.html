@@ -1,0 +1,26 @@
+{% extends 'layout/layout.html' %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+
+{% for articulo in articulos %}
+    <article class="caja_articulos"></article>
+        <div class="contenido">
+            <h2>{{articulo.title}}</h2>
+            <p>
+                {% for category in articulo.categories.all %}
+                    <a href="{{% url "" %}}"
+                {% endfor %}
+            </p>
+            <p>{{articulo.content}}</p>
+
+        </div>
+
+
+
+
+{% endfor %}
+
+
+{% endblock %}

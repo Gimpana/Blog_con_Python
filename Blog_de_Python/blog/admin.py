@@ -1,16 +1,10 @@
 from django.contrib import admin
-from .models import Category,Article
+from .models import Category, Article
 
 
 
 class CategoryAdmin(admin.ModelAdmin):
     pass
-
-
-class ArticleAdmin(admin.ModelAdmin):
-    pass
-
-
 
 
 
